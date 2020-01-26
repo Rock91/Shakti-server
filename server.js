@@ -37,6 +37,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.json())
 app.use(Routes);
 
-app.listen(3006,()=>{
+const port = process.env.PORT || 8080
+app.listen(port,()=>{
     console.log("Server started 3006..........>",new Date())
 })
