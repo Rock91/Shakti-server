@@ -3,8 +3,8 @@
  */
 mongoose = module.exports = require('mongoose');
 
-url = "mongodb://localhost:27017/shakti"
-// url = "mongodb+srv://ronak:12345@cluster0-ouucp.mongodb.net/test?retryWrites=true&w=majority"
+// url = "mongodb://localhost:27017/shakti"
+url = "mongodb+srv://ronak:12345@cluster0-ouucp.mongodb.net/test?retryWrites=true&w=majority"
 
 mongoose.connect(url)
 .then(()=>console.log("Mongoose Connected successfully....**....!",new Date()))
