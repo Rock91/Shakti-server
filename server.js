@@ -16,6 +16,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path  = require('path');
 const app = express();
+const logger = require('morgan')
 
 //Internal Dependencies **** ronak
 Routes = require('./Routes');
@@ -34,10 +35,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+app.use(logger('dev'));
 app.use(express.json())
 app.use(Routes);
 
 const port = process.env.PORT || 8080
 app.listen(port,()=>{
-    console.log("Server started 3006..........>",new Date())
+    console.log("Server started  "+port+"..........>",new Date())
 })

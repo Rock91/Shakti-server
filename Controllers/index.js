@@ -5,6 +5,7 @@ MongoId = module.exports = require('mongodb').ObjectId;
 
 module.exports  = {   
     AdminController : require('./AdminController'),
-    ItemController : require('./ItemController')
+    ItemController : require('./ItemController'),
+    CustomerController : require('./CustomerController')
 };
 
